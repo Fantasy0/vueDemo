@@ -1,6 +1,6 @@
 <template>
     <div>
-      我是全貌族谱
+      我是全貌族谱啊
     </div>
 </template>
 
