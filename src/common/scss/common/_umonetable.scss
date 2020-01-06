@@ -1,0 +1,473 @@
+@charset "utf-8";
+@import "../base/variables";
+@import "../base/mixin";
+@import "../base/normalize";
+
+//table每列的宽度
+@for $i from 1 through 100 {
+    .w-p#{$i} {
+        width: 1% * $i !important;
+    }
+    .w-#{$i} {
+        width: 10px * $i !important;
+    }
+    .p-l#{$i} {
+        padding-left: 10px * $i !important;
+    }
+}
+
+//表格start
+//包裹表格
+.table-main{
+    padding: 20px 20px 0 20px;
+}
+// 只展示表格
+.base-table ,.base-table  tr th, .base-table  tr td {
+    border: 1px solid $um-border-color;
+}
+.base-table {
+    border-radius: 6px;
+    border-collapse: collapse;
+    text-align: center;
+    color: $um-white;
+    thead tr {
+        background: rgba($thead-tr-bg,0.8);
+        line-height: 42px;
+    }
+    tbody tr {
+        //隔行换颜色
+        &:nth-child(even) {
+            background: rgba($tbody-tr-even-bg,0.4);
+        }
+        &:nth-child(odd) {
+            //background: $tbody-tr-odd-bg;
+        }
+        line-height: $tr-height;
+        &:hover {
+            background-color: rgba($um-border-color,0.6);
+        }
+        .user-name{
+            color: $um-blue;
+            text-decoration: underline;
+        }
+    }
+    //操作文字
+    .operation-btn{
+        cursor: pointer;
+        display: inline-block;
+        //width: 70px;
+        //height: 30px;
+        //line-height: 30px;
+        //border: 1px solid $um-blue;
+        border-radius: $border-radius;
+        color: $um-blue;
+    }
+    .operation-btn-red{
+        color: $um-red;
+    }
+    //操作图片
+    .operation-img{
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        margin-left: 1px;
+        margin-right: 1px;
+        cursor: pointer;
+    }
+}
+
+//可编辑表格
+.edit-table{
+    color: $um-white;
+    //pay可编辑表格：¥金额符号
+    td{
+        position: relative;
+        .pay{
+            //color: $pay-color;
+            position: absolute;
+            left: 30%;
+            top: 0;
+        }
+    }
+    //input
+    input[type='text'] {
+        height: 35px;
+        width: 100%;
+        background: transparent;
+        outline: none;
+        border: none;
+        box-shadow: none;
+        text-align: center;
+        color: $um-white;
+    }
+    //time
+    .el-date-editor.el-input, .el-date-editor.el-input__inner {
+        margin-top: 0px;
+    }
+    //.el-input.is-disabled .el-input__inner
+    .el-input.is-disabled .el-input__inner{
+        background-color: transparent;
+    }
+    //select
+    .selector{
+        width: 90%;
+        //边框
+        .select-text{
+            input[type="text"]{
+                border: none;
+            }
+        }
+    }
+    //下拉小箭头
+    .selector .select-text div .select-icon {
+        display: none;
+    }
+    //删除按钮
+    .icon-del {
+        color: $um-red;
+    }
+}
+
+// 只展示表格
+.detai-table{
+    //border: 1px solid red;
+}
+.detai-table  td {
+    border: 1px solid $um-border-color;
+    border-top: none;
+    height: 40px;
+}
+//表头高度
+.detai-table {
+    thead tr {
+        background: rgba($thead-tr-bg,0.8);
+        line-height: 42px;
+    }
+}
+.detai-table {
+    //border-radius: 6px;
+    border-collapse: collapse;
+    text-align: center;
+    color: $um-white;
+    tbody tr {
+        //隔行换颜色
+        &:nth-child(even) {
+            background: rgba($tbody-tr-even-bg,0.4);
+        }
+        line-height: $tr-height;
+        &:hover {
+            background-color: rgba($um-border-color,0.6);
+        }
+    }
+}
+.detai-one-table {
+    thead tr {
+        background: rgba($thead-tr-bg,0.8);
+        line-height: 40px;
+    }
+}
+.detai-two-table {
+    thead tr {
+        background: rgba($thead-tr-bg,0.8);
+        line-height: 20px;
+    }
+}
+.detai-title-table  td {
+    border: 1px solid $um-border-color;
+    //border-top: none;
+}
+.detai-title-table {
+    border-collapse: collapse;
+    text-align: center;
+    color: $um-white;
+    background: rgba($tbody-tr-even-bg,0.4);
+    border: 1px solid $um-border-color;
+}
+.position-rel{
+    position: relative;
+}
+.font12{
+    font-size: 12px
+}
+.hidden{
+    display: none;
+}
+//没有信息
+.no-info {
+    //font-weight: bold;
+    color: $um-white;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.mg-bottom10{
+    margin-bottom: 10px;
+}
+.mg-bottom{
+    margin-bottom: 20px;
+}
+.mg-top40{
+    margin-top: 40px;
+}
+.mg-top{
+    margin-top: 20px;
+}
+.mg-right{
+    margin-right: 20px;
+}
+.pd-left10{
+    padding-left: 10px;
+}
+.pd-left40{
+    padding-left: 40px;
+}
+.pd10{
+    padding: 10px;
+}
+.pd-bottom{
+    padding-bottom: 20px;
+}
+.pd-top{
+    padding-top: 20px;
+}
+.pd-left{
+    padding-left: 20px;
+}
+.pd-right{
+    padding-right: 20px;
+}
+.pd-bottom10{
+    padding-bottom: 10px;
+}
+.pd-top0{
+    padding-top: 0px;
+}
+.pd-bottom0{
+    padding-bottom: 0px;
+}
+.pd-left0{
+    padding-left: 0px;
+}
+.pd-right0{
+    padding-right: 0px;
+}
+.pd-top10{
+    padding-top: 10px;
+}
+.pd-top15{
+    padding-top: 15px;
+}
+.pd-left30{
+    padding-left: 30px;
+}
+.pd-right40{
+    padding-right: 40px;
+}
+//左对齐
+.ta-left{
+    text-align: left;
+}
+.ta-center{
+    text-align: center;
+}
+//表格end
+
+//hr
+.border-hr{
+    height: 1px;
+    border: none;
+    border-top: 1px dashed #cfcfcf;
+    margin: 0 20px;
+}
+
+//边框
+.border-bottom{
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #cfcfcf;
+}
+//编辑或者详情页面返回按钮
+.return-main{
+    font-size: 14px;
+    margin-bottom: 20px;
+    .setup-pro{
+        padding: 0;
+        background: $um-white;
+        width: 84px;
+        height: 40px;
+        line-height: 40px;
+        color: $um-blue;
+        .icon-xiafan{
+            padding-right: 10px;
+            color: $um-blue;
+        }
+    }
+    //路径
+    .crumbs-nav{
+        color: #999;
+        padding-left: 20px;
+    }
+}
+//米号颜色
+.icon-mihao {
+    color: $um-error-red;
+    display: inline-block;
+    font-size: 8px;
+}
+//错误文字
+.error-txt{
+    position: absolute;
+    //width: 100px;
+    font-size: 14px;
+    display: inline-block;
+    padding-left: 5px;
+    color: $um-error-red;
+    top: 18px;
+}
+//错误边框
+.error-border{
+    border-color: $um-error-red;
+    .select-text input[type="text"] {
+        border-color: $um-error-red;
+    }
+}
+//编辑按钮和标题 start
+//编辑页面标题
+.edit-title {
+    height: 60px;
+    line-height: 60px;
+    background-color: rgba($thead-tr-bg, 0.8);
+    font-size: 16px;
+    padding-left: 20px;
+    border-radius: $border-radius;
+    position: relative;
+    .edit-btn-main{
+        position: absolute;
+        right: 20px;
+        top: 0px;
+        .btn-edit{
+            padding: 0;
+            font-size: 14px;
+            width: 140px;
+            height: 40px;
+            line-height: 38px;
+            box-sizing: border-box;
+            outline: none;
+            border-radius: $border-radius ;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .btn-cancel{
+            color: $um-border-color;
+            background: transparent;
+            border: 1px solid $um-border-color;
+            cursor: pointer;
+        }
+        .btn-save{
+            color: #fff;
+            background: $um-blue;
+            border: 1px solid $um-blue;
+            cursor: pointer;
+        }
+    }
+}
+//编辑页面内容
+.edit-content {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed $um-border-color;
+    //ul 文本框
+    .content-infos {
+        //li
+        .content-title {
+            position: relative;
+            margin-top: 10px;
+            .title {
+                display: inline-block;
+                padding-right: 10px;
+                position: relative;
+                padding-left: 15px;
+                .icon-mihao {
+                    position: absolute;
+                    top: 2px;
+                    left: -2px;
+                }
+            }
+            .titleuser {
+                width: 95px;
+                box-sizing: border-box;
+            }
+            .titledesc {
+                width: 67px;
+                box-sizing: border-box;
+            }
+            .ruler_titledesc {
+                width: 53px;
+                box-sizing: border-box;
+            }
+            .search-input {
+                width: 80%;
+                padding-left: 10px;
+                padding-right: 10px;
+                box-sizing: border-box;
+            }
+
+        }
+        .content-title-second {
+            float: left;
+            width: 50%;
+        }
+
+    }
+}
+//编辑按钮和标题 en
+//光标
+.cursor{
+    cursor: pointer;
+}
+//popover
+//poperMain
+.poperMain{
+    border-radius: $border-radius;
+    border: 1px solid $um-border-color;
+    color: $um-border-color;
+    padding: 12px 14px;
+    min-width: 100px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+//
+.tip-red{
+    color: $um-red;
+    font-size: 12px;
+}
+.tip-blue{
+    color: $um-blue;
+    font-size: 12px;
+}
+//elmentui datatime
+.el-picker-panel__footer{
+    display: none;
+}
+.el-input--small .el-input__inner {
+    color: #606266;
+    border: 1px solid #d4d6dc !important;
+}
+.el-time-spinner.has-seconds .el-time-spinner__wrapper{
+    width: 32%;
+}
+.el-icon-time{
+    display: none;
+}
+//按钮
+.btn-rating{
+    font-size: 14px;
+    height: 36px;
+    box-sizing: border-box;
+    @include transition(.3s all);
+    color: #fff;
+    background: $um-blue;
+    &:hover {
+        background-color: $um-blue-hover;
+    }
+}

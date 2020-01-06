@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1",
+    "name": "首页",
+    "parentId": "0",
+    "subclassList": [
+      {
+        "id": "101",
+        "name": "简介",
+        "parentId": "1",
+        "route": "home"
+      },
+      {
+        "id": "102",
+        "name": "全貌族谱",
+        "parentId": "1",
+        "route": "business-graph"
+      },
+      {
+        "id": "103",
+        "name": "业务图谱",
+        "parentId": "1",
+        "route": "incidence-graph"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "指标",
+    "parentId": "0",
+    "subclassList": [
+      {
+        "id": "201",
+        "name": "列表查询",
+        "parentId": "2",
+        "route": "indexLib-list"
+      },
+      {
+        "id": "202",
+        "name": "指标详情",
+        "parentId": "2",
+        "route": "indexLib-detail"
+      },
+      {
+        "id": "203",
+        "name": "指标树",
+        "parentId": "2",
+        "route": "indexLib-tree"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "图表",
+    "parentId": "0",
+    "subclassList": [
+      {
+        "id": "301",
+        "name": "折线图表1",
+        "parentId": "3",
+        "route": "echart-demo1"
+      },
+      {
+        "id": "302",
+        "name": "折线图表2",
+        "parentId": "3",
+        "route": "echart-demo2"
+      },
+      {
+        "id": "303",
+        "name": "折线图表3",
+        "parentId": "3",
+        "route": "echart-demo3"
+      }
+    ]
+  }
+]

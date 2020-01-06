@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/**
+ * 字体
+ */
+$font: Microsoft Yahei, Arial, Helverica Neue, helvetica, sans-serif;
+
+/**
+ * 颜色
+ */
+// common
+$green: #3b9641;
+$light-green: #d8ecc6;
+$red: #cc3333;
+$light-red: #ffcccc;
+$yellow: #b48804;
+$light-yellow: #fbe9a1;
+$blue: #006699;
+$light-blue: #c5eaf3;
+$gray: #cccccc;
+$white: #fff;
+$orange: #eaa535;
+$purple: #624cbf;
+$weekend-bg: #f6f6f6;
+$progress-bg: #a3c0bc;
+$hover-bg: #f1f7f6;
+
+
+// system themes
+$disabled: #9fa2a1;
+$um-green: #0cc2a9;
+$um-green-hover: #3dceba;
+$um-green-active: #0aa590;
+$um-green-disabled: rgba($disabled, 1);
+$um-red: #FF6370;
+$um-red-hover: #f38c8e;
+$um-red-active: #cc5e61;
+$um-red-disabled: rgba($disabled, 1);
+$um-purple: #7b5eea;
+$um-purple-hover: #957eee;
+$um-purple-active: #6950c7;
+$um-purple-disabled: rgba($disabled, 1);
+//蓝色
+$um-blue: #1890ff;
+$um-blue-hover: #1890ff;
+$um-blue-disabled: rgba($disabled, 1);
+
+$um-orange: #f0ad2b;
+$um-orange-hover: #ffac82;
+$um-orange-active: #d98054;
+$um-orange-disabled: rgba($disabled, 1);
+//白的
+$um-white: #fff;
+//边框颜色
+$um-border-color:#5267B3;
+$um-placehold-color:#ADB5C5;
+//error
+$um-error-red:#F65151;
+
+/**
+ * typography
+ */
+$color-content: #333;
+$color-light-content: #666;
+$color-gray-content: #999;
+//sidbar字体颜色
+$color-white-content: #f5f5f5;
+
+
+/**
+ * 层级
+ */
+$index-header: 10;
+$index-mask: 20;
+$index-popup: 30;
+$index-btn: 3;
+
+//border-radius
+$border-radius:5px;
+
+/**
+ * 布局相关
+ */
+$header-height: 60px;
+$page-head-height: 81px;
+$page-status-height: 50px;
+//
+$header-bg: #0d285e;
+$header-color: #e0e4ec;
+$header-bg-active: #323232;
+$content-bg: #eeeeee;
+$table-bg: #e3e3e3;
+$btn-border: #d6d6d6;
+$side-border: #d3d3d3;
+$side-border-bg: #f8f8f8;
+$btn-border-hover: #b2b2b2;
+$menu_content: #e0e0e0;
+$select-arrow: #f2f2f2;
+$close-bg: #a48f92;
+$modify-border: #eaecec;
+$choose-bg: #d1d1d1;
+$choose-border: #f9f9f9;
+$model-border: #f6eded;
+$sidebar-expanded-width: 170px;
+$sidebar-collapsed-width: 50px;
+
+// 输入框高度, 包含边框
+$input-field-height: 40px;
+
+/**
+ * 素材项目尺寸
+ */
+$material-width: 230px;
+$material-height: 265px;
+$material-preview-height: 199px;
+
+// table variables
+$thead-height: 41px;
+$tbody-height: 46px;
+$um-progress-bg: #b8d2cf;
+$um-invalid-bg: #ff464a;
+$um-shadow: #ececec;
+//table add
+$table-border: #f5f5f5;
+$thead-tr-bg: #0C1639;
+$confirm-bg: #141F44;
+$tbody-tr-hover-bg: #F1FBFE;
+$tbody-tr-even-bg: #0C1639;
+$tbody-tr-odd-bg: #fff;
+$tr-height: 37px;
+//¥金额符号颜色
+$pay-color: #333;
+//¥金额符号颜色
+$table-font-color: #333;
+
